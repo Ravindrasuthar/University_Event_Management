@@ -28,7 +28,7 @@ public class StudentController {
 
 ```
 @PostMapping("add/event")
-    public String AddEvent(EventModel eventModel)
+    public String AddEvent(@RequestBody EventModel eventModel)
     {
         return eventService.AddEvent(eventModel);
     }
@@ -50,10 +50,10 @@ The @GetMapping annotation is used for the (get/all/student and get/student/by/i
         return eventService.GetAllEvent();
     }
 
-    @GetMapping("get/all/event/by/date/{date}")
-    public List<EventModel> GetAllEventByDate(@PathVariable LocalDate da)
+    @GetMapping("get/all/event/by/date/{d}")
+    public List<EventModel> GetAllEventByDate(@PathVariable LocalDate d)
     {
-        return eventService.GetAllEventByDate(da);
+        return eventService.GetAllEventByDate(d);
     }
 ```
 ```
@@ -81,7 +81,7 @@ The @PutMapping annotation is used for the updates/tudent/{Id}/{department} or u
 ```
 ```
 @PutMapping("update/event")
-    public String UpdateEvent(EventModel eventModel)
+    public String UpdateEvent(@RequestBody EventModel eventModel)
     {
         return eventService.UpdateEvent(eventModel);
     }
