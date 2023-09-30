@@ -9,7 +9,7 @@ University Event Management
 # Data Flow
 
 
-_**Controller:**_ The controller has endpoints for adding a student or event, getting all student or event, getting a student or event by their ID, and deleting a student or event by their ID. The @PostMapping annotation is used for the addstudent or addevent endpoint to handle HTTP POST requests with a JSON request body containing a student or event object. The @Valid annotation is used to validate the student object against any defined validation constraints.
+_**Controller:**_ The controller has endpoints for adding a student or event, getting all student or event, getting a student or event by their ID and getting all event by date, updating student department and update an event, and deleting a student or event by their ID. The @PostMapping annotation is used for the addstudent or addevent endpoint to handle HTTP POST requests with a JSON request body containing a student or event object. The @Valid annotation is used to validate the student object against any defined validation constraints.
 
 The @GetMapping annotation is used for the (getallstudent and getstudentbyid) or (getallevent and getalleventbydate) endpoints to handle HTTP GET requests with and without a path variable for the student ID or event ID, respectively. The @PathVariable annotation is used to extract the student ID or event ID from the request URL and pass it to the getstudentbyid or geteventbyid method.
 
@@ -20,6 +20,8 @@ The @DeleteMapping annotation is used for the deletestudentbuid or deleteeventby
 The controller class also has an autowired instance of the StudentService and EventService interface to handle business logic for the University Event Management.
 
 This implementation demonstrates a basic setup for a REST API controller in Spring Boot, but it can be expanded upon and customized based on specific requirements for the User Management System.
+
+In the application.properties all the text required for connection with h2 database are written.
 
 
 _**Services**:_ The services layer contains the business logic of the application. It receives requests from the controller, performs necessary computations or data manipulations, and interacts with the repository layer to access data.
