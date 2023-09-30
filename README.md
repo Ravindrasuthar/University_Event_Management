@@ -25,3 +25,10 @@ This implementation demonstrates a basic setup for a REST API controller in Spri
 _**Services**:_ The services layer contains the business logic of the application. It receives requests from the controller, performs necessary computations or data manipulations, and interacts with the repository layer to access data.
 
 _**Repository:**_ The repository layer is responsible for interacting with the database. It uses Spring Data JPA to perform CRUD (create, read, update, delete) operations on entities.
+
+# Database Structure Used
+I have used h2 as DataBase
+
+# Project Summary
+In this project i have create different endpoints like and used differet vaalidation for the end ponits
+
